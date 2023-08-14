@@ -1,0 +1,15 @@
+﻿@model NortwindExample.Entities.Product
+
+@{
+    Layout = "../Shared/_AdminLayout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<h2>Create new product</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.EditorForModel()
+    <input type="submit" value="Save" />
+}

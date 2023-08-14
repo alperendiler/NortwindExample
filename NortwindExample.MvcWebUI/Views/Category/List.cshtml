@@ -1,0 +1,13 @@
+﻿@model System.Collections.Generic.List<NortwindExample.Entities.Category>
+
+
+@Html.RouteLink("Home", new {controller= "Product",action="Index",category=0})
+@foreach (var category in Model)
+{
+    @Html.RouteLink(category.CategoryName, new
+{
+ category = category.CategoryID,
+   controller = "Product",
+   action = "Index"
+})
+} 
